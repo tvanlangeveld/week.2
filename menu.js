@@ -172,35 +172,28 @@ let foodArr = [{
 
 //CODE HERE
 
-function filterTag(foodList, taggInput, callBack)
-{ let foodListArr = [] 
-    for(let i = 0; i < foodList.length; i++){
-        if(callBack(taggInput,foodList[i].tags)){
-          foodListArr.push(foodList[i]) 
-        }
-    } return foodListArr
-}
-
-
-function checkTag(tagString,tagArr){
-    let isTagged = false;
-    for(let i = 0; i < tagArr.length; i++){
-        if(tagArr[i] === tagString) {
-            isTagged = true;
-        }
-    } return isTagged
-}
-
-let filteredFood = filterTag(foodArr, 'adult', checkTag)
-
-console.log(filteredFood)
-
-
-
-
-// function filter(foodArr, taggInput){
-//     let
+// function filterTag(foodList, taggInput, callBack)
+// { let foodListArr = [] 
+//     for(let i = 0; i < foodList.length; i++){
+//         if(callBack(taggInput,foodList[i].tags)){
+//           foodListArr.push(foodList[i]) 
+//         }
+//     } return foodListArr
 // }
+
+
+// function checkTag(tagString,tagArr){
+//     let isTagged = false;
+//     for(let i = 0; i < tagArr.length; i++){
+//         if(tagArr[i] === tagString) {
+//             isTagged = true;
+//         }
+//     } return isTagged
+// }
+
+// let filteredFood = filterTag(foodArr, 'adult', checkTag)
+
+// console.log(filteredFood)
 
 
 
@@ -244,6 +237,42 @@ console.log(filteredFood)
 */
 
 //CODE HERE
+
+
+function filterByProperty(property, num, type){
+    let propertyTag = false;
+    if(type === 'above'){
+        if(property > num){
+            propertyTag = true;
+            }
+    }      
+    if(type === 'below'){
+        if(property < num){
+         
+            propertyTag = true;
+        }
+    }  
+    return propertyTag 
+} 
+
+
+function propertyFilter(foodList, number, kind, callBack){
+    let foodListArr = [] 
+    for(let i = 0; i < foodList.length; i++){
+        if(callBack(foodList[0].price, number, kind)){
+            if(callBack(foodList[0].raiting, number, kind)){
+              foodList.push(foodList[i])}
+        }
+    } 
+        return foodListArr
+ } 
+
+
+
+let newListFiltered = propertyFilter(foodArr, 6, 'above', filterByProperty)
+
+    console.log(newListFiltered)
+
 
 
 /*
