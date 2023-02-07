@@ -25,11 +25,11 @@
 
 
 
-const greetUser = username => {
-    return `Welcome Back, ${username}`
-}
+// const greetUser = username => {
+//     return `Welcome Back, ${username}`
+// }
 
-const customer = greetUser('Tanner')
+// const customer = greetUser('Tanner')
 
 // console.log(customer)
 
@@ -55,19 +55,19 @@ const customer = greetUser('Tanner')
         // `You're in our delivery zone!`
 */
 
-const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
+// const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 
-//CODE HERE
+// //CODE HERE
 
-const canWeDeliver = zipCode => {
-    for(let i = 0; i < deliveryAreaZipCodes.length; i++){
-        if(zipCode === deliveryAreaZipCodes[i])
-    return 'Youre in our delivery zone!'
-    else{ return 'Sorry, we cant deliver to your address'}
-    } 
-}
+// const canWeDeliver = zipCode => {
+//     for(let i = 0; i < deliveryAreaZipCodes.length; i++){
+//         if(zipCode === deliveryAreaZipCodes[i])
+//     return 'Youre in our delivery zone!'
+//     else{ return 'Sorry, we cant deliver to your address'}
+//     } 
+// }
 
-const zipCodeArea = canWeDeliver(85215)
+// const zipCodeArea = canWeDeliver(85215)
 
 // console.log(zipCodeArea)
 
@@ -90,14 +90,14 @@ const zipCodeArea = canWeDeliver(85215)
 
 // CODE HERE
 
-const canWeDeliverTwo = zipCode => {
-    if(deliveryAreaZipCodes.includes(zipCode))
-    return 'We deliver to your area'
-    else{ return 'Sorry we do not deliver to your area'}
-}
+// const canWeDeliverTwo = zipCode => {
+//     if(deliveryAreaZipCodes.includes(zipCode))
+//     return 'We deliver to your area'
+//     else{ return 'Sorry we do not deliver to your area'}
+// }
 
 
-const zipCodeAreaTwo = canWeDeliverTwo(85204)
+// const zipCodeAreaTwo = canWeDeliverTwo(85204)
 
 // console.log(zipCodeAreaTwo)
 
@@ -136,12 +136,23 @@ const deals = [
 
 //CODE HERE
 
-deals.replace(15, 10)
+// let newDeals = deals; newDeals.replace(15, 10);
 
-// console.log(deals.replace('15%', '10%'));
-console.log(deals)
+// console.log(newDeals)
 
-// get help on this question 
+// deals[0].replace('15%', '10%');
+// console.log(deals)
+
+
+let newDeals = [deals[0].replace('15%', '10%')];
+
+console.log(newDeals)
+
+// var vars = [{key: 'key', value: 'value'}];
+// vars[0].key = 'newkey';
+// vars[0].value = 'newvalue';
+
+
 /*
     The restaurant is going to continue its
     family deal for another month. 

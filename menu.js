@@ -39,7 +39,7 @@ const pizza = {
     category: 'entree',
     popularity: 8,
     raiting: 10,
-    tags: ['gulten free', 'kids']
+    tags: ['gluten-free', 'kids']
 }
 
 
@@ -83,7 +83,7 @@ const pizza = {
 
 let {price} = pizza
 
-console.log(price)
+// console.log(price)
 
 /*
     Fourth, and last, destructure the category
@@ -96,7 +96,7 @@ console.log(price)
 
 let {category} = pizza 
 
-console.log(category)
+// console.log(category)
 
 
 //////////////////PROBLEM 3////////////////////
@@ -114,6 +114,49 @@ console.log(category)
 //CODE HERE
 
 
+let foodArr = [{
+        name: 'Ham',
+        price: 7,
+        category: 'entree',
+        popularity: 9,
+        raiting: 10,
+        tags: ['gluten-free', 'teens']
+    },
+     {
+        name: 'cheese',
+        price: 6,
+        category: 'entree',
+        popularity: 11,
+        raiting: 10,
+        tags: ['veg-free', 'adult']
+    },
+    {
+        name: 'Ham',
+        price: 7,
+        category: 'entree',
+        popularity: 9,
+        raiting: 12,
+        tags: ['gluten-free', 'kids']
+    },
+    {
+        name: 'turkey',
+        price: 6,
+        category: 'entree',
+        popularity: 10,
+        raiting: 7,
+        tags: ['dairy-free', 'all']
+    },
+    {
+        name: 'hawaiian',
+        price: 9,
+        category: 'entree',
+        popularity: 10,
+        raiting: 10,
+        tags: ['vegan-free', 'adult']
+    }]
+
+
+// console.log(foodArr)
 
 //////////////////PROBLEM 4////////////////////
 /* 
@@ -129,7 +172,35 @@ console.log(category)
 
 //CODE HERE
 
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
+function filterTag(foodList, taggInput, callBack)
+{ let foodListArr = [] 
+    for(let i = 0; i < foodList.length; i++){
+        if(callBack(taggInput,foodList[i].tags)){
+          foodListArr.push(foodList[i]) 
+        }
+    } return foodListArr
+}
+
+
+function checkTag(tagString,tagArr){
+    let isTagged = false;
+    for(let i = 0; i < tagArr.length; i++){
+        if(tagArr[i] === tagString) {
+            isTagged = true;
+        }
+    } return isTagged
+}
+
+let filteredFood = filterTag(foodArr, 'adult', checkTag)
+
+console.log(filteredFood)
+
+
+
+
+// function filter(foodArr, taggInput){
+//     let
+// }
 
 
 
