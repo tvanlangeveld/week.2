@@ -144,13 +144,21 @@ const deals = [
 // console.log(deals)
 
 
-let newDeals = [deals[0].replace('15%', '10%')];
+// let newDeals = [deals[0].replace('15%', '10%')];
 
 // console.log(newDeals)
 
-// var vars = [{key: 'key', value: 'value'}];
-// vars[0].key = 'newkey';
-// vars[0].value = 'newvalue';
+// let newDeals = deals.replaceAll('15%', '10%')
+// console.log(newDeals)
+
+// string.replace(deals, "15", '10')
+// console.log(deals)
+
+
+let {deals.replace("15", '10')} = newDeals
+
+console.log(newDeals)
+
 
 
 

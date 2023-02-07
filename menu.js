@@ -238,6 +238,19 @@ let foodArr = [{
 
 //CODE HERE
 
+// function filterByProperty(property,number,type){
+//     let filterArr = []
+//     for(let property in fooodArr )
+    
+// }
+
+
+
+
+
+
+
+
 
 function filterByProperty(property, num, type){
     let propertyTag = false;
@@ -269,9 +282,10 @@ function propertyFilter(foodList, number, kind, callBack){
 
 
 
-let newListFiltered = propertyFilter(foodArr, 6, 'above', filterByProperty)
 
-    console.log(newListFiltered)
+
+
+
 
 
 
@@ -283,3 +297,9 @@ let newListFiltered = propertyFilter(foodArr, 6, 'above', filterByProperty)
 */
 
 //CODE HERE
+
+
+let newListFiltered = filterByProperty(foodArr, 6, 'above', propertyFilter)
+
+    console.log(newListFiltered)
+

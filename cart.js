@@ -35,7 +35,25 @@ const cart = [
 
 //CODE HERE
 
-// const summedPrice = cart.reduce(/* CALLBACK HERE */)
+// let totPrice = 0;
+// for(let i in cart)
+//     totPrice + i;
+
+
+// console.log(totPrice)
+
+
+const summedPrice = cart.reduce((accumulator, currentValue) => { 
+    return accumulator + currentValue
+    },0);
+
+console.log(summedPrice)
+
+
+
+
+
+
 
 
 //////////////////PROBLEM 2////////////////////
@@ -54,6 +72,21 @@ const cart = [
 */
 
 //CODE HERE
+
+
+
+
+function calcFinalPrice(cartTotal,tax,couponValue) {
+    return cartTotal * tax - couponValue  
+}
+
+const totPriceAbove = calcFinalPrice(26.97, .06, .10)
+
+console.log(totPriceAbove)
+
+
+
+
 
 
 
@@ -78,7 +111,15 @@ const cart = [
 */
 
 /*
-    TEXT ANSWER HERE
+    TEXT ANSWER HERE 
+const customerModel = {
+    name: 'name' this will be a string, I chose this because We are just going to pass through a 
+    address: 'address', We will be using a string even though we will be passing some numbers it is meant to just identify the customers address.
+    item: ['item', 'item'], We will be using an array of strings here. Because we will be ordering multi items from the menu.
+    totalCost: totalCost. We will be using a number
+}
+
+
 
 */
 
@@ -88,3 +129,11 @@ const cart = [
 */
 
 //CODE HERE
+
+
+const customer = {
+    name: 'Tanner',
+    address: '6611 e mayo blvd phx',
+    items: ['burger', 'fries'],
+    totalCost: 9.99
+}
