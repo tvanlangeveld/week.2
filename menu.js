@@ -172,28 +172,28 @@ let foodArr = [{
 
 //CODE HERE
 
-// function filterTag(foodList, taggInput, callBack)
-// { let foodListArr = [] 
-//     for(let i = 0; i < foodList.length; i++){
-//         if(callBack(taggInput,foodList[i].tags)){
-//           foodListArr.push(foodList[i]) 
-//         }
-//     } return foodListArr
-// }
+function filterTag(foodList, taggInput, callBack)
+{ let foodListArr = [] 
+    for(let i = 0; i < foodList.length; i++){
+        if(callBack(taggInput,foodList[i].tags)){
+          foodListArr.push(foodList[i]) 
+        }
+    } return foodListArr
+}
 
 
-// function checkTag(tagString,tagArr){
-//     let isTagged = false;
-//     for(let i = 0; i < tagArr.length; i++){
-//         if(tagArr[i] === tagString) {
-//             isTagged = true;
-//         }
-//     } return isTagged
-// }
+function checkTag(tagString,tagArr){
+    let isTagged = false;
+    for(let i = 0; i < tagArr.length; i++){
+        if(tagArr[i] === tagString) {
+            isTagged = true;
+        }
+    } return isTagged
+}
 
-// let filteredFood = filterTag(foodArr, 'adult', checkTag)
+let filteredFood = filterTag(foodArr, 'adult', checkTag)
 
-// console.log(filteredFood)
+console.log(filteredFood)
 
 
 
@@ -237,20 +237,6 @@ let foodArr = [{
 */
 
 //CODE HERE
-
-// function filterByProperty(property,number,type){
-//     let filterArr = []
-//     for(let property in fooodArr )
-    
-// }
-
-
-
-
-
-
-
-
 
 function filterByProperty(property, num, type){
     let propertyTag = false;
