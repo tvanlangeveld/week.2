@@ -146,24 +146,28 @@ const deals = [
 
 let newDeals = [deals[0].replace('15%', '10%')];
 
-console.log(newDeals)
+// console.log(newDeals)
 
 // var vars = [{key: 'key', value: 'value'}];
 // vars[0].key = 'newkey';
 // vars[0].value = 'newvalue';
 
 
-/*
-    The restaurant is going to continue its
-    family deal for another month. 
 
-    Reassign the value of the second deal's desc
-    to be itself, but use the `replace` method
-    to replace the word March with April.
 
-    You should also make sure that there is no
-    whitespace in this string, since it seems
-    to be displaying wrong on the live site.
-*/
+// 
+//     The restaurant is going to continue its
+//     family deal for another month. 
+
+//     Reassign the value of the second deal's desc
+//     to be itself, but use the `replace` method
+//     to replace the word March with April.
+
+//     You should also make sure that there is no
+//     whitespace in this string, since it seems
+//     to be displaying wrong on the live site.
+// */
 
 //CODE HERE
+
+
